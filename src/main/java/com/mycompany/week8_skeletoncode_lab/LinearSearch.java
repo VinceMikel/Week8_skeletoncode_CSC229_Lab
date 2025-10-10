@@ -12,7 +12,14 @@ public class LinearSearch {
     
     public static int search(int arr[], int x)
     {
-        int n = arr.length;
+        int n = arr.length; // provided, so when we use a for loop statement we dont have to put i < arr[i]
+        for(int i =0; i < n; i++) {
+            if (arr[i] == x) { // once target is matched
+                return i;
+            }
+        }
+        return -1; //return the index of the first match
+        
         // Todo 01: - complete the implementation of linear search and test your code  
          //         - prvoide asymptotic analysis of the developed solution
     }
